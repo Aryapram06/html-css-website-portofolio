@@ -208,49 +208,59 @@ nav ul li a.active {
     color: #555;
 }
 
-.about-content h3 {
-    margin: 20px 0 10px;
-    font-size: 1.3rem;
-}
 
-.about-content ul {
-    margin-bottom: 20px;
-}
 
-.skills {
+.education-section {
+    
     margin-bottom: 30px;
 }
 
-.skill-item {
+.section-title {
+    font-size: 22px;
     margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.education-item {
+    margin-bottom: 10px;
+}
+
+.education-item li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.university {
+    color: #666;
+    font-size: 15px;
+}
+
+.kemampuan-section {
+    margin-bottom: 50px;
+}
+
+.skill2-item {
+    margin-bottom: 15px;
+}
+
+.skill2-name {
+    margin-bottom: 5px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.skill-name {
-    flex: 0 0 120px;
-    text-align: left;
-}
-
-.skill-bar {
-    flex: 1;
+.skill2-bar {
     height: 8px;
     background-color: #eee;
     border-radius: 4px;
-    margin: 0 15px;
-    overflow: hidden;
 }
 
-.skill-level {
+.skill2-progress {
     height: 100%;
-    background-color: #333;
+    background-color: #222;
     border-radius: 4px;
 }
 
-.skill-percentage {
-    flex: 0 0 40px;
-    text-align: right;
-}
 
 
 
