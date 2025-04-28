@@ -43,7 +43,6 @@ nav ul {
 }
 
 nav ul li a {
-    color: #black;
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -132,10 +131,11 @@ nav ul li a.active {
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 120px;
     margin-bottom: 50px;
     flex-wrap: wrap;
 }
+
 
 .gallery-item {
     flex: 0 0 calc(33.333% - 30px);
