@@ -7,142 +7,144 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- Import Animate.css dengan versi terbaru -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS untuk efek scroll -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <div class="logo-container">
             <a href="index.html">
-                <img src="image/ERY (2).png" width="80">
+                <img src="image/ERY (2).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link animate__animated animate__fadeIn">Home</a></li>
+                <li><a href="galeri-portofolio.html" class="nav-link animate__animated animate__fadeIn animate__delay-1s">Galeri Portofolio</a></li>
+                <li><a href="about.html" class="nav-link animate__animated animate__fadeIn animate__delay-2s active">About</a></li>
+                <li><a href="blog.html" class="nav-link animate__animated animate__fadeIn animate__delay-3s">Blog</a></li>
+                <li><a href="contact.html" class="nav-link animate__animated animate__fadeIn animate__delay-4s">Contact</a></li>
             </ul>
         </nav>
     </header>
   
   <!-- About Section -->
   <section class="about2-section">
-    <div class="profile-image">
-        <img src="image/WhatsApp Image 2025-03-12 at 03.07.00.jpeg">
+    <div class="profile-image animate__animated animate__fadeInLeft" data-aos="fade-right">
+        <img src="image/WhatsApp Image 2025-03-12 at 03.07.00.jpeg" class="profile-hover">
     </div>
-    <div class="aboutlengkap-content">
-        <h1>Arya Pramukti</h1>
-        <p>Hi, nama saya Arya, saya berasal dari Makassar</p>
-        <p>Seorang desainer visual yang berfokus pada eksplorasi distorsi visual dengan pendekatan minimalis. Berkomitmen untuk menciptakan karya-karya yang memadukan unsur casual dan urban yang bermakna.</p>
+    <div class="aboutlengkap-content animate__animated animate__fadeInRight" data-aos="fade-left">
+        <h1 class="animate__animated animate__fadeIn animate__delay-1s">Arya Pramukti</h1>
+        <p class="animate__animated animate__fadeIn animate__delay-2s">Hi, nama saya Arya, saya berasal dari Makassar</p>
+        <p class="animate__animated animate__fadeIn animate__delay-3s">Seorang desainer visual yang berfokus pada eksplorasi distorsi visual dengan pendekatan minimalis. Berkomitmen untuk menciptakan karya-karya yang memadukan unsur casual dan urban yang bermakna.</p>
         
-        
-        <div class="education-section">
-            <h2 class="section-title">Pendidikan</h2>
-            <ul class="education-item">
+        <div class="education-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title animate__animated animate__fadeIn animate__delay-4s">Pendidikan</h2>
+            <ul class="education-item animate__animated animate__fadeIn animate__delay-5s">
                 <li>S1 BISNIS DIGITAL<br>
                     <span class="university">Universitas Negeri Makassar, 2019-2023</span>
                 </li>
             </ul>
         </div>
         
-    
-        <div class="kemampuan-section">
-            <h2 class="section-title">Keahlian</h2>
+        <div class="kemampuan-section" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title animate__animated animate__fadeIn animate__delay-5s">Keahlian</h2>
             <div class="skill2-item">
-                <div class="skill2-name">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-6s">
                     <span>Visual Design</span>
                     <span>95%</span>
                 </div>
                 <div class="skill2-bar">
-                    <div class="skill2-progress" style="width: 95%;"></div>
+                    <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                 </div>
             </div>
             <div class="skill2-item">
-                <div class="skill2-name">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-7s">
                     <span>Typography</span>
                     <span>90%</span>
                 </div>
                 <div class="skill2-bar">
-                    <div class="skill2-progress" style="width: 90%;"></div>
+                    <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                 </div>
             </div>
             <div class="skill2-item">
-                <div class="skill2-name">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-8s">
                     <span>Digital Art</span>
                     <span>85%</span>
                 </div>
                 <div class="skill2-bar">
-                    <div class="skill2-progress" style="width: 85%;"></div>
+                    <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="services-details-section">
-    <div class="services-box">
-        <h2>SERVICES</h2>
+<section class="services-details-section" data-aos="fade-up">
+    <div class="services-box animate__animated animate__fadeInUp">
+        <h2 class="animate__animated animate__fadeIn">SERVICES</h2>
         <ul>
-            <li>Graphic Design</li>
-            <li>Illustration</li>
-            <li>Poster</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Graphic Design</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-2s">Illustration</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-3s">Poster</li>
         </ul>
     </div>
-    <div class="details-box">
-        <h2>DETAILS</h2>
+    <div class="details-box animate__animated animate__fadeInUp animate__delay-2s">
+        <h2 class="animate__animated animate__fadeIn">DETAILS</h2>
         <ul>
-            <li>Perfectionist</li>
-            <li>Hard Worker</li>
-            <li>Humoris</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-4s">Perfectionist</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-5s">Hard Worker</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-6s">Humoris</li>
         </ul>
     </div>
-    <div class="claims-box">
-        <h2>CLAIMS TO FAME</h2>
+    <div class="claims-box animate__animated animate__fadeInUp animate__delay-4s">
+        <h2 class="animate__animated animate__fadeIn">CLAIMS TO FAME</h2>
         <ul>
-            <li>6 months professional experience</li>
-            <li>4 client</li>
-            <li>Finish God Of War</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-7s">6 months experience</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-8s">4 client</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-9s">Finish God Of War</li>
         </ul>
     </div>
 </section>
 
-<section class="contact-section">
-    <a href="contact.html" class="cta-button" style="display: inline-block; padding: 5px 40px; margin-bottom: 60px;background-color: white; color: black; text-decoration: none;font-weight: 700; border-radius: 5px;">CONTACT</a>
+<section class="contact-section" data-aos="zoom-in">
+    <a href="contact.html" class="cta-button animate__animated animate__pulse animate__infinite animate__slower" style="display: inline-block; padding: 5px 40px; margin-bottom: 60px;background-color: white; color: black; text-decoration: none;font-weight: 700; border-radius: 5px;">CONTACT</a>
 </section>
 
 <footer>
     <div class="footer-container">
-        <div class="footer-logo">
-            <img src="image/ERY (1).png" width="80">
+        <div class="footer-logo" data-aos="fade-right">
+            <img src="image/ERY (1).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
             <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
         </div>
         
-        <div class="footer-sitemap">
+        <div class="footer-sitemap" data-aos="fade-up" data-aos-delay="200">
             <h3>SITEMAPS</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="hover-underline">Home</a></li>
+                <li><a href="portfolio.html" class="hover-underline">Portfolio</a></li>
+                <li><a href="about.html" class="hover-underline">About</a></li>
+                <li><a href="blog.html" class="hover-underline">Blog</a></li>
+                <li><a href="contact.html" class="hover-underline">Contact</a></li>
             </ul>
         </div>
         
-        <div class="footer-social">
+        <div class="footer-social" data-aos="fade-up" data-aos-delay="400">
             <h3>Social Media</h3>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn animate__delay-1s"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn animate__delay-2s"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn animate__delay-3s"><i class="fab fa-behance"></i></a>
             </div>
         </div>
         
-        <div class="footer-newsletter">
+        <div class="footer-newsletter" data-aos="fade-left" data-aos-delay="600">
             <h3>Newsletter</h3>
             <form class="newsletter-form">
-                <input type="email" placeholder="Email address">
-                <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>
+                <input type="email" placeholder="Email address" class="input-animation">
+                <button type="submit" class="animate__animated animate__pulse animate__infinite"><i class="fas fa-paper-plane" style="color: black;"></i></button>
             </form>
         </div>
     </div>
@@ -152,5 +154,116 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    // Inisialisasi AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        // Animasi progress bar
+        setTimeout(function() {
+            const progressBars = document.querySelectorAll('.animate-progress');
+            progressBars[0].style.width = "95%";
+            progressBars[1].style.width = "90%";
+            progressBars[2].style.width = "85%";
+        }, 1500);
+        
+        // Menambahkan efek hover pada navigasi
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.classList.add('animate__pulse');
+            });
+            link.addEventListener('mouseleave', function() {
+                this.classList.remove('animate__pulse');
+            });
+        });
+        
+        
+    });
+</script>
 
+<style>
+    /* Transisi untuk progress bar */
+    .skill2-progress {
+        transition: width 1.5s ease-in-out;
+    }
+    
+    /* Efek hover pada profil */
+    .profile-hover {
+        transition: transform 0.6s ease, filter 0.5s ease;
+    }
+    
+    .profile-hover:hover {
+        transform: scale(1.02) rotate(1deg);
+        filter: contrast(110%);
+    }
+    
+    /* Animasi list item */
+    .services-box li, .details-box li, .claims-box li {
+        transition: transform 0.3s ease;
+    }
+    
+    .services-box li:hover, .details-box li:hover, .claims-box li:hover {
+        transform: translateX(10px);
+    }
+    
+    /* Style aktif untuk link navigasi */
+    nav ul li a.active {
+        color: #000;
+        font-weight: bold;
+    }
+    
+    nav ul li a.active::after {
+        width: 100%;
+    }
+    
+    /* Efek underline untuk menu */
+    .hover-underline {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .hover-underline:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #fff;
+        transition: width 0.3s ease;
+    }
+    
+    .hover-underline:hover:after {
+        width: 100%;
+    }
+    
+    /* Animasi untuk input */
+    .input-animation {
+        transition: all 0.3s ease;
+    }
+    
+    .input-animation:focus {
+        border-color: #000;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Enhanced list animations for services */
+    .services-box li:before, .details-box li:before, .claims-box li:before {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .services-box li:hover:before, .details-box li:hover:before, .claims-box li:hover:before {
+        transform: scale(1.5);
+    }
+</style>
 
+<!-- Load TypeIt.js for typing animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+</body>
+</html>

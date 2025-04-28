@@ -7,139 +7,162 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- Import Animate.css dengan versi terbaru -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS (Animate On Scroll) untuk efek scroll yang mulus -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <div class="logo-container">
             <a href="index.html">
-                <img src="image/ERY (2).png" width="80">
+                <img src="image/ERY (2).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link animate__animated animate__fadeIn">Home</a></li>
+                <li><a href="galeri-portofolio.html" class="nav-link animate__animated animate__fadeIn animate__delay-1s">Galeri Portofolio</a></li>
+                <li><a href="about.html" class="nav-link animate__animated animate__fadeIn animate__delay-2s">About</a></li>
+                <li><a href="blog.html" class="nav-link animate__animated animate__fadeIn animate__delay-3s">Blog</a></li>
+                <li><a href="contact.html" class="nav-link animate__animated animate__fadeIn animate__delay-4s">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('image/hero\ sect.jpg');background-size: cover; background-position: center; position: relative; height: 600px;" </section>
-        <div class="hero-content animate__animated animate__jackInTheBox" style="position: relative; z-index: 2; color: white; text-align: center; padding: 20px 20px;">
-            <h1>Jejak Imaji</h1>
-            <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
-            <a href="galeri-portofolio.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: white; color: black; text-decoration: none; border-radius: 5px;">  Lihat Portofolio </a>
+    <section class="hero animate__animated animate__fadeIn" style="background-image: url('image/hero\ sect.jpg');background-size: cover; background-position: center; position: relative; height: 600px;">
+        <div class="hero-content animate__animated animate__zoomIn animate__delay-1s" style="position: relative; z-index: 2; color: white; text-align: center; padding: 20px 20px;">
+            <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Jejak Imaji</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-3s">Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
+            <a href="galeri-portofolio.html" class="cta-button animate__animated animate__fadeInUp animate__delay-4s" style="display: inline-block; padding: 10px 20px; background-color: white; color: black; text-decoration: none; border-radius: 5px;">Lihat Portofolio</a>
         </div>
     </section>
 
     <!-- Featured Works Section -->
-    <section class="featured-works">
-        <h2>Karya Terpilih</h2>
+    <section class="featured-works" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up">Karya Terpilih</h2>
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="image/poster 2.jpg"  width="200">
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="200" onclick="openGalleryModal(0)">
+                <img src="image/poster 2.jpg" width="200" class="hover-effect" alt="Poster Design 2" title="Poster Design 2">
             </div>
-            <div class="gallery-item">
-                <img src="image/poster 1.jpg" width="200">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openGalleryModal(1)">
+                <img src="image/poster 1.jpg" width="200" class="hover-effect" alt="Poster Design 1" title="Poster Design 1">
             </div>
-            <div class="gallery-item">
-                <img src="image/poster 3.jpg" width="200">
+            <div class="gallery-item" data-aos="fade-left" data-aos-delay="600" onclick="openGalleryModal(2)">
+                <img src="image/poster 3.jpg" width="200" class="hover-effect" alt="Poster Design 3" title="Poster Design 3">
             </div>
         </div>
-        <a href="galeri-portofolio.html" class="cta-button"style="display: inline-block; padding: 10px 20px; background-color: #FAF7F2; color: BLACK; text-decoration: none; border-radius: 5px;">SELENGKAPNYA</a>
+        <a href="galeri-portofolio.html" class="cta-button animate__animated animate__pulse animate__infinite animate__slower" style="display: inline-block; padding: 10px 20px; background-color: #FAF7F2; color: BLACK; text-decoration: none; border-radius: 5px;">SELENGKAPNYA</a>
     </section>
 
-    <!-- About Me Section -->
-    <section class="about-me">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="image/WhatsApp Image 2025-03-12 at 03.07.00.jpeg" width="240">
+    <!-- Modal untuk preview gambar -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-container">
+            <span class="close-modal" onclick="closeGalleryModal()">&times;</span>
+            <div class="modal-content animate__animated animate__fadeIn">
+                <img id="modalImage" src="" alt="Detail Gambar">
+                <div class="image-caption">
+                    <h3 id="imageTitle"></h3>
+                </div>
             </div>
-            <div class="about-content">
+            <div class="modal-nav">
+                <button class="nav-btn prev" onclick="changeGalleryImage(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next" onclick="changeGalleryImage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="modal-pagination">
+                <span id="currentImageNumber"></span> / <span id="totalImages">3</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section class="about-me" data-aos="fade-up">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right" data-aos-delay="300">
+                <img src="image/WhatsApp Image 2025-03-12 at 03.07.00.jpeg" width="240" class="hover-zoom">
+            </div>
+            <div class="about-content" data-aos="fade-left" data-aos-delay="300">
                 <h2>Tentang Saya</h2>
                 <p>Seorang desainer visual yang berfokus pada eksplorasi distorsi visual dengan pendekatan minimalis. Berkomitmen untuk menciptakan karya-karya yang memadukan unsur casual dan urban yang bermakna.</p>
                 
-                <div class="education-section">
+                <div class="education-section" data-aos="fade-up" data-aos-delay="400">
                     <h2 class="section-title">Pendidikan</h2>
                     <ul class="education-item">
-                        <li>S1 BISNIS DIGITAL<br>
+                        <li class="animate__animated animate__fadeIn animate__delay-1s">S1 BISNIS DIGITAL<br>
                             <span class="university">Universitas Negeri Makassar, 2019-2023</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="kemampuan-section">
+                <div class="kemampuan-section" data-aos="fade-up" data-aos-delay="500">
                     <h2 class="section-title">Keahlian</h2>
-                    <div class="skill2-item">
+                    <div class="skill2-item animate__animated animate__fadeInLeft">
                         <div class="skill2-name">
                             <span>Visual Design</span>
                             <span>95%</span>
                         </div>
                         <div class="skill2-bar">
-                            <div class="skill2-progress" style="width: 95%;"></div>
+                            <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                         </div>
                     </div>
-                    <div class="skill2-item">
+                    <div class="skill2-item animate__animated animate__fadeInLeft animate__delay-1s">
                         <div class="skill2-name">
                             <span>Typography</span>
                             <span>90%</span>
                         </div>
                         <div class="skill2-bar">
-                            <div class="skill2-progress" style="width: 90%;"></div>
+                            <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                         </div>
                     </div>
-                    <div class="skill2-item">
+                    <div class="skill2-item animate__animated animate__fadeInLeft animate__delay-2s">
                         <div class="skill2-name">
                             <span>Digital Art</span>
                             <span>85%</span>
                         </div>
                         <div class="skill2-bar">
-                            <div class="skill2-progress" style="width: 85%;"></div>
+                            <div class="skill2-progress animate-progress" style="width: 0%;"></div>
                         </div>
                     </div>
-                    <a href="about.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color:white; color: black;font-weight: 700; text-decoration: none; border-radius: 5px;">SELENGKAPNYA</a>
-                    <!-- Footer Section -->
+                    <a href="about.html" class="cta-button animate__animated animate__pulse animate__infinite animate__slower" style="display: inline-block; padding: 10px 20px; background-color:white; color: black;font-weight: 700; text-decoration: none; border-radius: 5px;">SELENGKAPNYA</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     
     <!-- Footer Section -->
     <footer>
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="image/ERY (1).png" width="80">
+            <div class="footer-logo" data-aos="fade-right">
+                <img src="image/ERY (1).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
                 <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
             </div>
             
-            <div class="footer-sitemap">
+            <div class="footer-sitemap" data-aos="fade-up" data-aos-delay="200">
                 <h3>QUICK LINKS</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="hover-underline">Home</a></li>
+                    <li><a href="portfolio.html" class="hover-underline">Portfolio</a></li>
+                    <li><a href="about.html" class="hover-underline">About</a></li>
+                    <li><a href="blog.html" class="hover-underline">Blog</a></li>
+                    <li><a href="contact.html" class="hover-underline">Contact</a></li>
                 </ul>
             </div>
             
-            <div class="footer-social">
+            <div class="footer-social" data-aos="fade-up" data-aos-delay="400">
                 <h3>Social Media</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-1s"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-2s"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-3s"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
             
-            <div class="footer-newsletter">
+            <div class="footer-newsletter" data-aos="fade-left" data-aos-delay="600">
                 <h3>Newsletter</h3>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Email address">
-                    <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>
+                    <input type="email" placeholder="Email address" class="input-animation">
+                    <button type="submit" class="animate__animated animate__pulse animate__infinite"><i class="fas fa-paper-plane" style="color: black;"></i></button>
                 </form>
             </div>
         </div>
@@ -149,5 +172,299 @@
         </div>
     </footer>
 
+    <!-- Script untuk animasi progress bar dan elemen lainnya -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        
+        // Animasi untuk progress bar
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                const progressBars = document.querySelectorAll('.animate-progress');
+                progressBars[0].style.width = "95%";
+                progressBars[1].style.width = "90%";
+                progressBars[2].style.width = "85%";
+            }, 1000);
+            
+            // Menambahkan efek hover pada navigasi
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+        
+        // Array untuk menyimpan data gallery
+        const galleryImages = [
+            {
+                src: "image/poster 2.jpg", 
+                title: "Poster Design 2"
+            },
+            {
+                src: "image/poster 1.jpg", 
+                title: "Poster Design 1"
+            },
+            {
+                src: "image/poster 3.jpg", 
+                title: "Poster Design 3"
+            }
+        ];
+        
+        let currentImageIndex = 0;
+        
+        // Fungsi untuk membuka modal gallery
+        function openGalleryModal(index) {
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('modalImage');
+            const imageTitle = document.getElementById('imageTitle');
+            const currentImageNumber = document.getElementById('currentImageNumber');
+            
+            currentImageIndex = index;
+            
+            // Update gambar dan judul
+            modalImg.src = galleryImages[index].src;
+            imageTitle.textContent = galleryImages[index].title;
+            currentImageNumber.textContent = (index + 1);
+            
+            // Tampilkan modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Mencegah scroll
+        }
+        
+        // Fungsi untuk menutup modal gallery
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Mengaktifkan scroll kembali
+        }
+        
+        // Fungsi untuk mengganti gambar di modal gallery
+        function changeGalleryImage(direction) {
+            currentImageIndex += direction;
+            
+            // Cek batas array
+            if (currentImageIndex >= galleryImages.length) {
+                // Jika sudah di gambar terakhir, redirect ke galeri-portofolio.html
+                window.location.href = "galeri-portofolio.html";
+                return;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            
+            // Update gambar dan judul
+            const modalImg = document.getElementById('modalImage');
+            const imageTitle = document.getElementById('imageTitle');
+            const currentImageNumber = document.getElementById('currentImageNumber');
+            
+            // Tambahkan animasi
+            modalImg.classList.add('animate__animated', 'animate__fadeIn');
+            setTimeout(() => {
+                modalImg.classList.remove('animate__animated', 'animate__fadeIn');
+            }, 500);
+            
+            modalImg.src = galleryImages[currentImageIndex].src;
+            imageTitle.textContent = galleryImages[currentImageIndex].title;
+            currentImageNumber.textContent = (currentImageIndex + 1);
+        }
+        
+        // Menutup modal jika klik di luar konten modal
+        window.onclick = function(event) {
+            const modal = document.getElementById('galleryModal');
+            if (event.target == modal) {
+                closeGalleryModal();
+            }
+        }
+        
+        // Menutup modal dengan tombol ESC dan navigasi dengan panah
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeGalleryModal();
+            } else if (event.key === 'ArrowLeft') {
+                changeGalleryImage(-1);
+            } else if (event.key === 'ArrowRight') {
+                changeGalleryImage(1);
+            }
+        });
+    </script>
+    
+    <!-- CSS tambahan untuk modal dan efek -->
+    <style>
+        /* Efek hover untuk gambar */
+        .hover-effect {
+            transition: transform 0.5s ease, filter 0.5s ease;
+            cursor: pointer;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* Efek untuk gambar profil */
+        .hover-zoom {
+            transition: transform 0.6s ease;
+        }
+        
+        .hover-zoom:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: hidden;
+        }
+        
+        .modal-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            max-width: 90%;
+            max-height: 80%;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .modal-content img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .image-caption {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        
+        .image-caption h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #999;
+            transform: rotate(90deg);
+        }
+        
+        /* Navigation Buttons */
+        .modal-nav {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .nav-btn {
+            background-color: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background-color: rgba(255,255,255,0.4);
+        }
+        
+        /* Pagination dan Redirect Button */
+        .modal-pagination {
+            color: white;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        .redirect-button {
+            margin-top: 30px;
+        }
+        
+        .view-more-btn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .view-more-btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-btn {
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .modal-content img {
+                max-height: 60vh;
+            }
+            
+            .close-modal {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+    </style>
 </body>
 </html>

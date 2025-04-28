@@ -7,96 +7,384 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-   
+    <!-- Import Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS untuk animasi scroll -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <div class="logo-container">
             <a href="index.html">
-                <img src="image/ERY (2).png" width="80">
+                <img src="image/ERY (2).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="galeri-portofolio.html" class="nav-link active">Galeri Portofolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
- <!-- Gallery Portfolio Section -->
- <section class="gallery-portofolio">
-    <h2>Galeri Portofolio</h2>
-    <div class="filter-buttons">
-        <button class="filter-btn active">Semua</button>
-        <button class="filter-btn">Poster</button>
-        <button class="filter-btn">Digital Art</button>
-        <button class="filter-btn">Typographic</button>
-    </div>
-    <div class="gambar-container">
-        <div class="gambar-item">
-            <img src="image/kick racism.jpg" alt="Kick Racism Out of Football">
+    
+    <!-- Gallery Portfolio Section -->
+    <section class="gallery-portofolio">
+        <h2 class="animate__animated animate__fadeInUp">Galeri Portofolio</h2>
+        <div class="filter-buttons animate__animated animate__fadeIn animate__delay-1s">
+            <button class="filter-btn active">Semua</button>
+            <button class="filter-btn">Poster</button>
+            <button class="filter-btn">Digital Art</button>
+            <button class="filter-btn">Typographic</button>
         </div>
-        <div class="gambar-item">
-            <img src="image/problem.png">
+        <div class="gambar-container">
+            <div class="gambar-item"  onclick="openModal(this)">
+                <img src="image/kick racism.jpg" alt="Kick Racism Out of Football" class="hover-effect" title="Kick Racism Out of Football">
+            </div>
+            <div class="gambar-item" data-aos="fade-up" data-aos-delay="200" onclick="openModal(this)">
+                <img src="image/problem.png" alt="Problem Solving" class="hover-effect" title="Problem Solving">
+            </div>
+            <div class="gambar-item" data-aos="fade-up" data-aos-delay="300" onclick="openModal(this)">
+                <img src="image/kolase gembira.png" alt="Stussy Design" class="hover-effect" title="Kolase Gembira">
+            </div>
+            <div class="gambar-item" data-aos="fade-up" data-aos-delay="400" onclick="openModal(this)">
+                <img src="image/The Panturas Music Poster.jpg" alt="The Panturas Music Poster" class="hover-effect" title="The Panturas Music Poster">
+            </div>
+            <div class="gambar-item" data-aos="fade-up" data-aos-delay="500" onclick="openModal(this)">
+                <img src="image/skate rock.jpg" alt="Skate Rock" class="hover-effect" title="Skate Rock">
+            </div>
+            <div class="gambar-item" data-aos="fade-up" data-aos-delay="600" onclick="openModal(this)">
+                <img src="image/rikoo.png" alt="Darurat Design" class="hover-effect" title="Propaganda Inpres">
+            </div>
         </div>
-        <div class="gambar-item">
-            <img src="image/stussy.png">
-        </div>
-        <div class="gambar-item">
-            <img src="image/The Panturas Music Poster.jpg">
-        </div>
-        <div class="gambar-item">
-            <img src="image/skate rock.jpg">
-        </div>
-        <div class="gambar-item">
-            <img src="image/darurat.png">
-        </div>
-    </div>
-  <a href="#" class="cta-button" style="display: inline-block; padding: 5px 40px; margin-top: 60px;background-color: black; color: white; text-decoration: none;font-weight: 700; border-radius: 5px;">NEXT</a>
-</section>
+        <a href="#" class="cta-button animate__animated animate__pulse animate__infinite animate__slower" style="display: inline-block; padding: 5px 40px; margin-top: 60px;background-color: black; color: white; text-decoration: none;font-weight: 700; border-radius: 5px;">NEXT</a>
+    </section>
 
- <!-- Footer Section -->
- <footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="image/ERY (1).png" width="80">
-            <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
+    <!-- Modal untuk melihat gambar -->
+    <div id="imageModal" class="modal">
+        <div class="modal-container">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-content animate__animated animate__fadeIn">
+                <img id="modalImage" src="" alt="Detail Gambar">
+                <div class="image-caption">
+                    <h3 id="imageTitle"></h3>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button class="nav-btn prev" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
-        
-        <div class="footer-sitemap">
-            <h3>SITEMAPS</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-social">
-            <h3>Social Media</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo" data-aos="fade-right">
+                <img src="image/ERY (1).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
+                <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
+            </div>
+            
+            <div class="footer-sitemap" data-aos="fade-up">
+                <h3>SITEMAPS</h3>
+                <ul>
+                    <li><a href="index.html" class="hover-underline">Home</a></li>
+                    <li><a href="portfolio.html" class="hover-underline">Portfolio</a></li>
+                    <li><a href="about.html" class="hover-underline">About</a></li>
+                    <li><a href="blog.html" class="hover-underline">Blog</a></li>
+                    <li><a href="contact.html" class="hover-underline">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social" data-aos="fade-up">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-1s"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-2s"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-3s"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter" data-aos="fade-left">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" class="input-animation">
+                    <button type="submit" class="animate__animated animate__pulse animate__infinite"><i class="fas fa-paper-plane" style="color: black;"></i></button>
+                </form>
             </div>
         </div>
         
-        <div class="footer-newsletter">
-            <h3>Newsletter</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Email address">
-                <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>
-            </form>
+        <div class="copyright">
+            <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>
         </div>
-    </div>
-    
-    <div class="copyright">
-        <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Hapus kelas active dari semua tombol
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Tambahkan kelas active ke tombol yang diklik
+                    this.classList.add('active');
+                    
+                    // Efek animasi pada gambar saat filter berubah
+                    const gambarItems = document.querySelectorAll('.gambar-item');
+                    gambarItems.forEach(item => {
+                        item.classList.add('animate__animated', 'animate__fadeOut');
+                        setTimeout(() => {
+                            item.classList.remove('animate__fadeOut');
+                            item.classList.add('animate__fadeIn');
+                        }, 500);
+                    });
+                });
+            });
+            
+            // Menambahkan efek hover pada navigasi
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+        
+        // Variable untuk menyimpan gambar saat ini
+        let currentImageIndex = 0;
+        let galleryImages = [];
+        
+        // Modal functionality
+        function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const imageTitle = document.getElementById('imageTitle');
+            
+            // Mengumpulkan semua gambar dalam galeri
+            const gambarItems = document.querySelectorAll('.gambar-item');
+            galleryImages = Array.from(gambarItems);
+            
+            // Mencari index gambar yang diklik
+            currentImageIndex = galleryImages.indexOf(element);
+            
+            const img = element.querySelector('img');
+            modalImg.src = img.src;
+            imageTitle.textContent = img.title || img.alt;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Mencegah scroll
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Mengaktifkan scroll kembali
+        }
+        
+        // Fungsi untuk navigasi antar gambar
+        function changeImage(direction) {
+            // Update index
+            currentImageIndex += direction;
+            
+            // Looping kembali ke awal/akhir jika melebihi batas
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            
+            // Update gambar yang ditampilkan
+            const modalImg = document.getElementById('modalImage');
+            const imageTitle = document.getElementById('imageTitle');
+            const img = galleryImages[currentImageIndex].querySelector('img');
+            
+            // Tambahkan animasi
+            modalImg.classList.add('animate__animated', 'animate__fadeIn');
+            setTimeout(() => {
+                modalImg.classList.remove('animate__animated', 'animate__fadeIn');
+            }, 500);
+            
+            modalImg.src = img.src;
+            imageTitle.textContent = img.title || img.alt;
+        }
+        
+        // Menutup modal jika klik di luar konten modal
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Menutup modal dengan tombol ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            } else if (event.key === 'ArrowLeft') {
+                changeImage(-1);
+            } else if (event.key === 'ArrowRight') {
+                changeImage(1);
+            }
+        });
+    </script>
+    
+    <!-- CSS tambahan untuk animasi dan modal -->
+    <style>
+        /* Efek hover untuk gambar */
+        .hover-effect {
+            transition: transform 0.5s ease, filter 0.5s ease;
+            cursor: pointer;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: hidden;
+        }
+        
+        .modal-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            max-width: 90%;
+            max-height: 90%;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .modal-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .image-caption {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        
+        .image-caption h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #999;
+            transform: rotate(90deg);
+        }
+        
+        /* Navigation Buttons */
+        .modal-nav {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .nav-btn {
+            background-color: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background-color: rgba(255,255,255,0.4);
+        }
+        
+        /* Animasi untuk filter button */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover:not(.active) {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-btn {
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .modal-content img {
+                max-height: 70vh;
+            }
+            
+            .close-modal {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</body>
+</html>

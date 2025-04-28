@@ -1,100 +1,227 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jejak Imaji - Visual Designer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!DOCTYPE html> 
+<html lang="id"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Jejak Imaji - Visual Designer Portfolio</title>     
+    <link rel="stylesheet" href="styles.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">     
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="image/ERY (2).png" width="80">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Tambahkan Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head> 
+<body>     
+    <header class="animate__animated animate__fadeIn animate__faster">         
+        <div class="logo-container">             
+            <a href="index.html">                 
+                <img src="image/ERY (2).png" width="80">             
+            </a>         
+        </div>         
+        <nav>             
+            <ul>                 
+                <li><a href="index.html">Home</a></li>                 
+                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>                 
+                <li><a href="about.html">About</a></li>                 
+                <li><a href="blog.html">Blog</a></li>                 
+                <li><a href="contact.html" class="active">Contact</a></li>             
+            </ul>         
+        </nav>     
+    </header>  
 
-<!-- Contact Section -->
-<section class="kontak">
-    <div class="hubungi">
-        <h2>Hubungi Saya</h2>   
-    </div>
-    <div class="kontak-form">
-        <div class="form-group">
-            <label for="name">Nama</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="pesan">Pesan</label>
-            <textarea id="pesan" name="pesan"></textarea>
-        </div>
-        <button type="submit" class="btn" style="display: inline-block; padding: 5px 80px; margin-bottom: 60px;background-color:black; color: white;   font-weight: 700; border-radius: 5px;"">Kirim Pesan</button>
-    </div>
-    
-    <div class="social-info">
-        <h3>Media Sosial</h3>
-        <ul>
-            <li><i class="fab fa-instagram"></i> @wthpnx</li>
-            <li><i class="fab fa-linkedin"></i> Arya Pramukti</li>
-            <li><i class="fab fa-behance"></i> pram</li>
-            <li><i class="far fa-envelope"></i> pramuktiarya67@gmail.com</li>
-        </ul>
-    </div>
-</section>
+    <!-- Contact Section --> 
+    <section class="kontak animate__animated animate__fadeIn">     
+        <div class="hubungi">         
+            <h2 class="animate__animated animate__fadeInDown animate__faster">Hubungi Saya</h2>        
+        </div>     
+        <div class="kontak-form animate__animated animate__fadeIn animate__delay-1s">         
+            <div class="form-group">             
+                <label for="name">Nama</label>             
+                <input type="text" id="name" name="name" class="input-animation">         
+            </div>         
+            <div class="form-group">             
+                <label for="email">Email</label>             
+                <input type="email" id="email" name="email" class="input-animation">         
+            </div>         
+            <div class="form-group">             
+                <label for="pesan">Pesan</label>             
+                <textarea id="pesan" name="pesan" class="input-animation"></textarea>         
+            </div>         
+            <button type="submit" class="btn" style="display: inline-block; padding: 5px 80px; margin-bottom: 60px;background-color:black; color: white; font-weight: 700; border-radius: 5px;">Kirim Pesan</button>     
+        </div>          
+        <div class="social-info animate__animated animate__fadeIn animate__delay-1s">         
+            <h3>Media Sosial</h3>         
+            <ul>             
+                <li><i class="fab fa-instagram"></i> @wthpnx</li>             
+                <li><i class="fab fa-linkedin"></i> Arya Pramukti</li>             
+                <li><i class="fab fa-behance"></i> pram</li>             
+                <li><i class="far fa-envelope"></i> pramuktiarya67@gmail.com</li>         
+            </ul>     
+        </div> 
+    </section>  
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="image/ERY (1).png" width="80">
-            <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
-        </div>
+    <footer>     
+        <div class="footer-container">         
+            <div class="footer-logo">             
+                <img src="image/ERY (1).png" width="80">             
+                <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>         
+            </div>                  
+            <div class="footer-sitemap">             
+                <h3>SITEMAPS</h3>             
+                <ul>                 
+                    <li><a href="index.html">Home</a></li>                 
+                    <li><a href="portfolio.html">Portfolio</a></li>                 
+                    <li><a href="about.html">About</a></li>                 
+                    <li><a href="blog.html">Blog</a></li>                 
+                    <li><a href="contact.html">Contact</a></li>             
+                </ul>         
+            </div>                  
+            <div class="footer-social">             
+                <h3>Social Media</h3>             
+                <div class="social-icons">                 
+                    <a href="#"><i class="fab fa-instagram"></i></a>                 
+                    <a href="#"><i class="fab fa-linkedin"></i></a>                 
+                    <a href="#"><i class="fab fa-behance"></i></a>             
+                </div>         
+            </div>                  
+            <div class="footer-newsletter">             
+                <h3>Newsletter</h3>             
+                <form class="newsletter-form">                 
+                    <input type="email" placeholder="Email address" class="input-animation">                 
+                    <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>             
+                </form>         
+            </div>     
+        </div>          
+        <div class="copyright">         
+            <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>     
+        </div> 
+    </footer>
+
+    <!-- CSS untuk animasi tambahan -->
+    <style>
+        /* Efek hover untuk input form */
+        .input-animation {
+            transition: all 0.3s ease;
+        }
         
-        <div class="footer-sitemap">
-            <h3>SITEMAPS</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+        .input-animation:focus {
+            border-color: #000;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
         
-        <div class="footer-social">
-            <h3>Social Media</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-            </div>
-        </div>
+        /* Membuat link navigasi aktif punya efek underline */
+        .active {
+            position: relative;
+        }
         
-        <div class="footer-newsletter">
-            <h3>Newsletter</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Email address">
-                <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>
-            </form>
-        </div>
-    </div>
-    
-    <div class="copyright">
-        <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>
-    </div>
-</footer>
+        .active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #000;
+        }
+        
+        /* Efek hover halus untuk tombol */
+        .btn {
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Animasi untuk item sosial media */
+        .social-info ul li {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .social-info ul li:hover {
+            transform: translateX(3px);
+        }
+        
+        /* Animasi untuk social icons di footer */
+        .footer-social .social-icons a {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .footer-social .social-icons a:hover {
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
+        
+        /* Animasi button newsletter */
+        .newsletter-form button {
+            transition: transform 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Transisi halus untuk seluruh halaman */
+        body {
+            transition: opacity 0.4s ease;
+        }
+    </style>
+
+    <!-- JavaScript untuk interaksi tambahan -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form submission effect
+            const submitBtn = document.querySelector('.btn');
+            
+            submitBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Subtle feedback animation
+                this.style.backgroundColor = '#333';
+                
+                // Form fields
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const pesanInput = document.getElementById('pesan');
+                
+                // Validate and show feedback
+                if (nameInput.value && emailInput.value && pesanInput.value) {
+                    this.innerHTML = 'Terkirim';
+                    
+                    // Reset form
+                    setTimeout(() => {
+                        // Reset button
+                        this.innerHTML = 'Kirim Pesan';
+                        this.style.backgroundColor = 'black';
+                        
+                        // Reset values
+                        nameInput.value = '';
+                        emailInput.value = '';
+                        pesanInput.value = '';
+                    }, 2000);
+                } else {
+                    // Subtle error indication
+                    this.style.backgroundColor = '#c00';
+                    setTimeout(() => {
+                        this.style.backgroundColor = 'black';
+                    }, 1000);
+                }
+            });
+            
+            // Subtle scroll animations
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                
+                // Subtle header effect on scroll
+                const header = document.querySelector('header');
+                if (scrollPosition > 50) {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body> 
+</html>

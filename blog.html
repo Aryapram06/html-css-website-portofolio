@@ -7,111 +7,541 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- Import Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS untuk animasi scroll -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <div class="logo-container">
             <a href="index.html">
-                <img src="image/ERY (2).png" width="80">
+                <img src="image/ERY (2).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeri-portofolio.html">Galeri Portofolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="galeri-portofolio.html" class="nav-link">Galeri Portofolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-<!-- Blog Section -->
-<section class="blog">
-    <h2>BLOG</h2>
-    
-    <h3>TRENDING TOPICS</h3>
-    <div class="blog-container">
-        <div class="blog-item">
-            <img src="image/distorsi.png">
-            <h4>Tren Desain Ilustrasi rebel dengan menggunakan visual distorsi</h4>
-            <p>Membahas Tentang penggunaan efek distorsi visual dalam desain ilustrasi rebel/propaganda</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-        <div class="blog-item">
-            <img src="image/gn.png" >
-            <h4>Prinsip Minimalis Dalam Desain Kontemporer</h4>
-            <p>Mengupas tuntas tentang pendekatan minimalis dalam menciptakan karya desain yang powerful dan bermakna</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-        <div class="blog-item">
-            <img src="image/tren.png">
-            <h4>Tren Desain Visual 2025</h4>
-            <p>Menganalisis perkembangan tren desain visual terkini dan bagaimana menetapkannya dalam karya kreatif</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-    </div>
-    
-    <h3>LATEST STORIES</h3>
-    <div class="blog-container">
-        <div class="blog-item">
-            <img src="image/music.png">
-            <h4>Poster Promosi Musik Vintage</h4>
-            <p>Bagaimana poster menjadi senjata ampuh untuk menyampaikan pesan politik</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-        <div class="blog-item">
-            <img src="image/vector.png" >
-            <h4>Vector vs raster : Mengapa Illustrator Menjadi Pilihan Terbaik Untuk Desain Grafis </h4>
-            <p>Menganalisis perkembangan tren desain visual terkini dan bagaimana menerapkannya dalam karya kreatif</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-        <div class="blog-item">
-            <img src="image/tren.png">
-            <h4>Tren Desain Visual 2023</h4>
-            <p>Menganalisis perkembangan tren desain visual terkini dan bagaimana menetapkannya dalam karya kreatif</p>
-            <a href="#" class="link">Baca selengkapnya →</a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="image/ERY (1).png" width="80">
-            <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
-        </div>
+    <!-- Blog Section -->
+    <section class="blog">
+        <h2 class="animate__animated animate__fadeInDown">BLOG</h2>
         
-        <div class="footer-sitemap">
-            <h3>SITEMAPS</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-social">
-            <h3>Social Media</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+        <h3 class="animate__animated animate__fadeIn animate__delay-1s">TRENDING TOPICS</h3>
+        <div class="blog-container">
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="image/distorsi.png" class="hover-zoom">
+                <h4>Tren Desain Ilustrasi rebel dengan menggunakan visual distorsi</h4>
+                <p class="blog-excerpt">Membahas Tentang penggunaan efek distorsi visual dalam desain ilustrasi rebel/propaganda</p>
+                <div class="blog-full-content">
+                    <p>Desain ilustrasi rebel dengan pendekatan distorsi visual telah menjadi tren yang semakin populer di kalangan desainer kontemporer. Teknik distorsi ini tidak hanya menciptakan efek visual yang menarik, tetapi juga menjadi alat yang efektif untuk menyampaikan pesan-pesan propaganda dan perlawanan.</p>
+                    <p>Dalam artikel ini, kita akan mengeksplorasi berbagai teknik distorsi visual yang digunakan dalam desain ilustrasi rebel, termasuk glitch art, pixel sorting, dan chromatic aberration. Kita juga akan membahas bagaimana teknik-teknik ini dapat digunakan untuk menciptakan karya-karya yang memiliki dampak emosional yang kuat pada audiens.</p>
+                    <p>Beberapa pionir dalam gerakan desain ini termasuk David Carson dan Stefan Sagmeister, yang telah mendorong batas-batas konvensi desain tradisional. Pengaruh mereka dapat dilihat dalam banyak karya kontemporer, dari poster politik hingga sampul album musik.</p>
+                    <p>Dengan menggunakan teknik distorsi visual, para desainer dapat menyampaikan perasaan ketidakstabilan, kekacauan, atau pemberontakan yang seringkali sejalan dengan pesan-pesan propaganda. Trend ini terus berkembang dan berevolusi, dengan para desainer terus mencari cara-cara baru untuk mendorong batas-batas medium visual.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="0">Baca selengkapnya →</a>
+            </div>
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="image/gn.png" class="hover-zoom">
+                <h4>Prinsip Minimalis Dalam Desain Kontemporer</h4>
+                <p class="blog-excerpt">Mengupas tuntas tentang pendekatan minimalis dalam menciptakan karya desain yang powerful dan bermakna</p>
+                <div class="blog-full-content">
+                    <p>Minimalisme dalam desain kontemporer lebih dari sekadar tren estetika; ini adalah filosofi desain yang mendalam yang berfokus pada esensi dan kejelasan. Dengan moto "less is more" yang terkenal dari arsitek Ludwig Mies van der Rohe, pendekatan minimalis menghilangkan semua elemen berlebihan untuk menonjolkan apa yang benar-benar penting.</p>
+                    <p>Artikel ini menjelajahi prinsip-prinsip inti minimalisme dalam desain kontemporer: kesederhanaan, fungsionalitas, dan keindahan dalam pengurangan. Kita akan membahas bagaimana desainer terkemuka seperti Dieter Rams dan Kenya Hara telah membentuk pemahaman modern kita tentang minimalisme, dan bagaimana karya mereka terus menginspirasi generasi baru desainer.</p>
+                    <p>Desain minimalis yang efektif tidak hanya tentang mengurangi elemen; ini tentang menemukan keseimbangan yang tepat antara ruang negatif dan positif, memilih tipografi yang tepat, dan menggunakan palet warna yang terbatas namun impactful. Artikel ini akan memberikan panduan praktis tentang menerapkan prinsip-prinsip ini dalam proyek desain Anda sendiri.</p>
+                    <p>Di era informasi yang berlebihan ini, pendekatan minimalis menawarkan kejelasan dan fokus yang sangat dibutuhkan. Dengan memahami filosofi di balik minimalisme, desainer dapat menciptakan karya yang tidak hanya estetis tetapi juga fungsional dan bermakna, memberikan dampak yang bertahan lama pada audiens mereka.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="1">Baca selengkapnya →</a>
+            </div>
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="500">
+                <img src="image/tren.png" class="hover-zoom">
+                <h4>Tren Desain Visual 2025</h4>
+                <p class="blog-excerpt">Menganalisis perkembangan tren desain visual terkini dan bagaimana menetapkannya dalam karya kreatif</p>
+                <div class="blog-full-content">
+                    <p>Seiring kita melangkah ke tahun 2025, lansekap desain visual terus berkembang dengan kecepatan yang belum pernah terjadi sebelumnya. Dalam artikel ini, kita akan menjelajahi trend desain visual yang diproyeksikan akan mendominasi tahun 2025, berdasarkan analisis perkembangan terkini dan wawancara dengan para pemimpin industri.</p>
+                    <p>Salah satu trend utama yang kita amati adalah kebangkitan Neo-Brutalism dalam desain digital, yang menggabungkan estetika kasar dan tidak berkompromi dari arsitektur Brutalist dengan sensibilitas digital kontemporer. Trend ini dicirikan oleh penggunaan tipografi berat, kontras tinggi, dan layout yang tidak konvensional untuk menciptakan pengalaman visual yang menantang namun menarik.</p>
+                    <p>Kita juga melihat pergeseran signifikan menuju desain yang lebih inklusif dan dapat diakses, dengan lebih banyak desainer mengadopsi pendekatan "desain untuk semua". Ini melibatkan pertimbangan yang cermat tentang warna, tipografi, dan layout untuk memastikan desain dapat diakses oleh semua orang, termasuk mereka dengan disabilitas.</p>
+                    <p>Kemajuan dalam AI generatif juga membentuk landscape desain visual, dengan semakin banyak desainer menggunakan alat AI untuk menghasilkan dan menyempurnakan karya mereka. Namun, ini juga menimbulkan pertanyaan tentang orisinalitas dan peran kreativitas manusia di era AI.</p>
+                    <p>Akhirnya, kita melihat pengaruh yang semakin besar dari desain yang dibuat dengan mempertimbangkan keberlanjutan, dengan lebih banyak desainer mencari cara untuk mengurangi dampak lingkungan dari karya mereka, dari memilih font yang hemat tinta hingga mengoptimalkan desain web untuk efisiensi energi.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="2">Baca selengkapnya →</a>
             </div>
         </div>
         
-        <div class="footer-newsletter">
-            <h3>Newsletter</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Email address">
-                <button type="submit"><i class="fas fa-paper-plane" style="color: black;"></i></button>
-            </form>
+        <h3 class="animate__animated animate__fadeIn animate__delay-3s">LATEST STORIES</h3>
+        <div class="blog-container">
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="image/music.png" class="hover-zoom">
+                <h4>Poster Promosi Musik Vintage</h4>
+                <p class="blog-excerpt">Bagaimana poster menjadi senjata ampuh untuk menyampaikan pesan politik</p>
+                <div class="blog-full-content">
+                    <p>Poster promosi musik vintage tidak hanya menjadi artefak budaya yang menarik; mereka juga merupakan jendela ke dalam lanskap politik dan sosial dari era mereka. Artikel ini menelusuri sejarah poster musik dari tahun 1960-an hingga 1980-an, dan bagaimana mereka menjadi medium yang kuat untuk menyampaikan pesan politik.</p>
+                    <p>Dari poster psikedelia tahun 60-an yang mencerminkan semangat kontra-budaya, hingga poster punk yang keras dan konfrontatif dari tahun 70-an dan 80-an, desain poster musik telah lama menjadi sarana bagi para seniman untuk menantang status quo dan mendorong perubahan sosial. Artikel ini menganalisis teknik desain dan simbolisme yang digunakan dalam poster-poster ini, dan bagaimana mereka memengaruhi gerakan politik kontemporer.</p>
+                    <p>Kita juga akan menjelajahi karya desainer poster musik berpengaruh seperti Stanley Mouse, Alton Kelley, dan Jamie Reid, yang karyanya tidak hanya mempromosikan pertunjukan musik tetapi juga menyuarakan sentimen politik generasi mereka. Melalui penggunaan tipografi yang berani, gambar-gambar provokatif, dan teknik kolase yang inovatif, para desainer ini menciptakan poster yang tidak hanya menarik perhatian tetapi juga menginspirasi tindakan.</p>
+                    <p>Artikel ini juga membahas kebangkitan minat kontemporer dalam poster musik vintage, baik sebagai barang koleksi maupun sebagai sumber inspirasi bagi desainer modern. Dengan menghargai warisan visual dan politik dari poster-poster ini, kita dapat memahami peran penting yang telah mereka mainkan dalam membentuk lanskap budaya dan politik, dan bagaimana mereka terus memengaruhi desain dan aktivisme kontemporer.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="3">Baca selengkapnya →</a>
+            </div>
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="image/vector.png" class="hover-zoom">
+                <h4>Vector vs raster : Mengapa Illustrator Menjadi Pilihan Terbaik Untuk Desain Grafis </h4>
+                <p class="blog-excerpt">Menganalisis perkembangan tren desain visual terkini dan bagaimana menerapkannya dalam karya kreatif</p>
+                <div class="blog-full-content">
+                    <p>Dalam dunia desain grafis, perdebatan antara grafik vektor dan raster telah berlangsung selama bertahun-tahun. Artikel ini menyelami perbedaan fundamental antara kedua jenis grafik ini, dan mengapa Adobe Illustrator tetap menjadi pilihan utama para profesional untuk grafik berbasis vektor.</p>
+                    <p>Grafik vektor, yang didasarkan pada persamaan matematika daripada piksel, menawarkan skalabilitas tanpa batas dan presisi yang tidak dapat dicapai dengan gambar raster. Hal ini membuat mereka ideal untuk logo, tipografi, dan desain yang memerlukan reproduksi dalam berbagai ukuran. Adobe Illustrator, sebagai perangkat lunak desain vektor terkemuka, memberikan set alat yang komprehensif yang memungkinkan desainer untuk memanfaatkan kekuatan grafik vektor sepenuhnya.</p>
+                    <p>Artikel ini menjelajahi fitur-fitur utama Illustrator yang membuatnya menonjol dari pesaingnya, termasuk sistem grid yang kuat, alat tipografi yang canggih, dan kemampuan untuk bekerja dengan objek 3D. Kita juga akan membahas bagaimana integrasi Illustrator dengan perangkat lunak Adobe lainnya menciptakan alur kerja yang mulus bagi para desainer.</p>
+                    <p>Sementara program seperti Photoshop tetap menjadi pilihan utama untuk pengeditan foto dan grafik raster, Illustrator menawarkan fleksibilitas dan kontrol yang tak tertandingi untuk menciptakan dan memanipulasi grafik berbasis vektor. Dengan memahami kekuatan dan batasan kedua jenis grafik, desainer dapat membuat keputusan yang tepat tentang alat mana yang akan digunakan untuk proyek tertentu, memastikan hasil yang optimal.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="4">Baca selengkapnya →</a>
+            </div>
+            <div class="blog-item" data-aos="fade-up" data-aos-delay="500">
+                <img src="image/tren.png" class="hover-zoom">
+                <h4>Tren Desain Visual 2023</h4>
+                <p class="blog-excerpt">Menganalisis perkembangan tren desain visual terkini dan bagaimana menetapkannya dalam karya kreatif</p>
+                <div class="blog-full-content">
+                    <p>Tahun 2023 telah menjadi tahun yang menentukan dalam evolusi desain visual, dengan beberapa tren yang berperan penting dalam membentuk lanskap kreatif. Artikel ini menelusuri tren-tren yang telah mendominasi industri desain visual sepanjang tahun ini, dan menawarkan wawasan tentang bagaimana menerapkannya dalam proyek kreatif Anda.</p>
+                    <p>Salah satu tren paling menonjol adalah kebangkitan estetika Y2K, dengan referensi ke desain awal 2000-an yang muncul kembali dalam mode, desain web, dan media sosial. Tren ini ditandai dengan penggunaan warna metalik, gradien, dan elemen futuristik yang memberikan sentuhan nostalgia sekaligus tampak segar dan kontemporer.</p>
+                    <p>Kita juga melihat pergeseran menuju desain yang lebih bertanggung jawab secara sosial, dengan lebih banyak merek dan desainer menciptakan karya yang mencerminkan nilai-nilai keberagaman, inklusivitas, dan keberlanjutan. Ini tidak hanya mencakup representasi yang lebih beragam dalam gambar, tetapi juga pertimbangan yang lebih mendalam tentang bagaimana desain dapat mempromosikan kesetaraan dan aksesibilitas.</p>
+                    <p>Dalam typografi, kita menyaksikan kebangkitan font serif yang berani dan ekspresif, menantang dominasi font sans-serif minimalis dari tahun-tahun sebelumnya. Font-font ini menambahkan kepribadian dan kehangatan pada desain, menciptakan pengalaman yang lebih manusiawi dan menarik.</p>
+                    <p>Akhirnya, tren menuju desain 3D yang lebih imersif telah semakin kuat, didorong oleh kemajuan dalam teknologi dan perangkat lunak yang membuat penciptaan konten 3D lebih mudah diakses bagi desainer dari semua tingkat keahlian. Tren ini terlihat di seluruh spektrum desain, dari desain web hingga branding dan ilustrasi.</p>
+                </div>
+                <a href="#" class="link blog-link" data-blog="5">Baca selengkapnya →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal untuk artikel blog -->
+    <div id="blogModal" class="blog-modal">
+        <div class="blog-modal-content animate__animated animate__fadeIn">
+            <span class="close-blog-modal">&times;</span>
+            <div id="modalBlogContent">
+                <!-- Konten artikel akan dimasukkan di sini via JavaScript -->
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo" data-aos="fade-right">
+                <img src="image/ERY (1).png" width="80" class="animate__animated animate__pulse animate__infinite animate__slower">
+                <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
+            </div>
+            
+            <div class="footer-sitemap" data-aos="fade-up">
+                <h3>SITEMAPS</h3>
+                <ul>
+                    <li><a href="index.html" class="hover-underline">Home</a></li>
+                    <li><a href="portfolio.html" class="hover-underline">Portfolio</a></li>
+                    <li><a href="about.html" class="hover-underline">About</a></li>
+                    <li><a href="blog.html" class="hover-underline">Blog</a></li>
+                    <li><a href="contact.html" class="hover-underline">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social" data-aos="fade-up">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-1s"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-2s"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="animate__animated animate__bounceIn animate__delay-3s"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter" data-aos="fade-left">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" class="input-animation">
+                    <button type="submit" class="animate__animated animate__pulse animate__infinite"><i class="fas fa-paper-plane" style="color: black;"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menambahkan efek hover pada navigasi
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+            
+            // Animasi untuk blog items pada hover
+            const blogItems = document.querySelectorAll('.blog-item');
+            blogItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Fungsi untuk "Baca selengkapnya"
+            const blogLinks = document.querySelectorAll('.blog-link');
+            const modal = document.getElementById('blogModal');
+            const modalContent = document.getElementById('modalBlogContent');
+            const closeBtn = document.querySelector('.close-blog-modal');
+            
+            // Sembunyikan semua konten lengkap blog
+            document.querySelectorAll('.blog-full-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Tambahkan event listener untuk setiap link "Baca selengkapnya"
+            blogLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Dapatkan index blog dari atribut data-blog
+                    const blogIndex = this.getAttribute('data-blog');
+                    
+                    // Dapatkan parent blog item
+                    const blogItem = this.closest('.blog-item');
+                    
+                    // Dapatkan data untuk modal
+                    const blogTitle = blogItem.querySelector('h4').textContent;
+                    const blogImage = blogItem.querySelector('img').src;
+                    const blogContent = blogItem.querySelector('.blog-full-content').innerHTML;
+                    
+                    // Isi modal dengan konten
+                    modalContent.innerHTML = `
+                        <h2>${blogTitle}</h2>
+                        <div class="blog-modal-info">
+                            <span class="blog-date">28 April 2025</span>
+                            <span class="blog-author">oleh Arya Pramukti</span>
+                        </div>
+                        <div class="blog-modal-image">
+                            <img src="${blogImage}" alt="${blogTitle}">
+                        </div>
+                        <div class="blog-modal-text">
+                            ${blogContent}
+                        </div>
+                        <div class="blog-modal-share">
+                            <span>Bagikan artikel ini:</span>
+                            <div class="share-icons">
+                                <a href="#" class="share-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Tampilkan modal
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Mencegah scroll pada body
+                    
+                    // Tambahkan efek hover pada link
+                    this.style.paddingLeft = '5px';
+                });
+                
+                // Efek hover pada link "Baca selengkapnya"
+                link.addEventListener('mouseenter', function() {
+                    this.classList.add('animate__pulse');
+                    this.style.paddingLeft = '5px';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.classList.remove('animate__pulse');
+                    this.style.paddingLeft = '0px';
+                });
+            });
+            
+            // Tutup modal saat tombol close diklik
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Kembalikan scroll pada body
+            });
+            
+            // Tutup modal saat klik di luar konten modal
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Tutup modal dengan tombol ESC
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
     
-    <div class="copyright">
-        <p>&copy; 2024 Jejak Imaji. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- CSS tambahan untuk animasi dan modal blog -->
+    <style>
+        /* Efek hover untuk gambar blog */
+        .hover-zoom {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        
+        .hover-zoom:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+        
+        /* Efek transisi untuk blog items */
+        .blog-item {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        /* Animasi untuk link */
+        .blog-link {
+            transition: padding-left 0.3s ease, color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .blog-link:hover {
+            color: #000;
+        }
+        
+        /* Animasi untuk judul blog pada hover */
+        .blog-item h4 {
+            transition: color 0.3s ease;
+        }
+        
+        .blog-item:hover h4 {
+            color: #333;
+        }
+        
+        /* Modal Blog Style */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .blog-modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 40px;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .close-blog-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: #333;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .close-blog-modal:hover {
+            color: #000;
+            transform: rotate(90deg);
+        }
+        
+        .blog-modal-content h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #222;
+        }
+        
+        .blog-modal-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .blog-modal-image {
+            margin-bottom: 30px;
+        }
+        
+        .blog-modal-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .blog-modal-text p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .blog-modal-share {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .share-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .share-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .share-icon:hover {
+            background-color: #333;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsif */
+        @media (max-width: 768px) {
+            .blog-modal-content {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .blog-modal-content h2 {
+                font-size: 24px;
+            }
+            
+            .blog-modal-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .blog-modal-share {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Animasi untuk input form */
+        .input-animation {
+            transition: all 0.3s ease;
+        }
+        
+        .input-animation:focus {
+            border-color: #000;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Efek underline untuk menu footer */
+        .hover-underline {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hover-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline:hover:after {
+            width: 100%;
+        }
+        
+        /* Efek smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Memperbaiki tampilan navigasi dengan animasi */
+        nav ul li a {
+            position: relative;
+            padding-bottom: 3px;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        /* Styling untuk konten blog */
+        .blog-excerpt {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        /* Animasi untuk modal */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-modal {
+            animation: fadeIn 0.5s ease;
+        }
+    </style>
+</body>
+</html>
