@@ -131,9 +131,9 @@ nav ul li a.active {
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 320x;
     margin-bottom: 50px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 
@@ -141,6 +141,7 @@ nav ul li a.active {
     flex: 0 0 calc(33.333% - 30px);
     max-width: 350px;
     height: 350px;
+    margin: 25px;
     transition: transform 0.3s ease;
     overflow: hidden;
     border-radius: 5px;
