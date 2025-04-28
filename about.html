@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="galeri-portofolio.html" class="nav-link">Galeri Portofolio</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -40,8 +40,8 @@
         <p class="animate__animated animate__fadeIn animate__delay-1s">Seorang desainer visual yang berfokus pada eksplorasi distorsi visual dengan pendekatan minimalis. Berkomitmen untuk menciptakan karya-karya yang memadukan unsur casual dan urban yang bermakna.</p>
         
         <div class="education-section" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="section-title animate__animated animate__fadeIn animate__delay-2s">Pendidikan</h2>
-            <ul class="education-item animate__animated animate__fadeIn animate__delay-2s">
+            <h2 class="section-title animate__animated animate__fadeIn animate__delay-1s">Pendidikan</h2>
+            <ul class="education-item animate__animated animate__fadeIn animate__delay-1s">
                 <li>S1 BISNIS DIGITAL<br>
                     <span class="university">Universitas Negeri Makassar, 2019-2023</span>
                 </li>
@@ -49,9 +49,9 @@
         </div>
         
         <div class="kemampuan-section" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="section-title animate__animated animate__fadeIn animate__delay-5s">Keahlian</h2>
+            <h2 class="section-title animate__animated animate__fadeIn animate__delay-1s">Keahlian</h2>
             <div class="skill2-item">
-                <div class="skill2-name animate__animated animate__fadeIn animate__delay-6s">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-1s">
                     <span>Visual Design</span>
                     <span>95%</span>
                 </div>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="skill2-item">
-                <div class="skill2-name animate__animated animate__fadeIn animate__delay-7s">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-1s">
                     <span>Typography</span>
                     <span>90%</span>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="skill2-item">
-                <div class="skill2-name animate__animated animate__fadeIn animate__delay-8s">
+                <div class="skill2-name animate__animated animate__fadeIn animate__delay-1s">
                     <span>Digital Art</span>
                     <span>85%</span>
                 </div>
@@ -86,24 +86,24 @@
         <h2 class="animate__animated animate__fadeIn">SERVICES</h2>
         <ul>
             <li class="animate__animated animate__fadeInLeft animate__delay-1s">Graphic Design</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-2s">Illustration</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-3s">Poster</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Illustration</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Poster</li>
         </ul>
     </div>
-    <div class="details-box animate__animated animate__fadeInUp animate__delay-2s">
+    <div class="details-box animate__animated animate__fadeInUp animate__delay-1s">
         <h2 class="animate__animated animate__fadeIn">DETAILS</h2>
         <ul>
-            <li class="animate__animated animate__fadeInLeft animate__delay-4s">Perfectionist</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-5s">Hard Worker</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-6s">Humoris</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Perfectionist</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Hard Worker</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Humoris</li>
         </ul>
     </div>
-    <div class="claims-box animate__animated animate__fadeInUp animate__delay-4s">
+    <div class="claims-box animate__animated animate__fadeInUp animate__delay-1s">
         <h2 class="animate__animated animate__fadeIn">CLAIMS TO FAME</h2>
         <ul>
-            <li class="animate__animated animate__fadeInLeft animate__delay-7s">6 months experience</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-8s">4 client</li>
-            <li class="animate__animated animate__fadeInLeft animate__delay-9s">Finish God Of War</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">6 months experience</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">4 client</li>
+            <li class="animate__animated animate__fadeInLeft animate__delay-1s">Finish God Of War</li>
         </ul>
     </div>
 </section>
@@ -219,6 +219,42 @@
     nav ul li a.active::after {
         width: 100%;
     }
+    nav ul li a {
+            position: relative;
+            padding-bottom: 3px;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        .active {
+            position: relative;
+        }
+        
+        .active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #000;
+        }
     
     /* Efek underline untuk menu */
     .hover-underline {

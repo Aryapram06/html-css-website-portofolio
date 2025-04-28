@@ -21,7 +21,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="galeri-portofolio.html" class="nav-link ">Galeri Portofolio</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
@@ -33,9 +33,9 @@
     <!-- Hero Section -->
     <section class="hero animate__animated animate__fadeIn" style="background-image: url('image/hero\ sect.jpg');background-size: cover; background-position: center; position: relative; height: 600px;">
         <div class="hero-content animate__animated animate__zoomIn animate__delay-1s" style="position: relative; z-index: 2; color: white; text-align: center; padding: 20px 20px;">
-            <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Jejak Imaji</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-3s">Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
-            <a href="galeri-portofolio.html" class="cta-button animate__animated animate__fadeInUp animate__delay-4s" style="display: inline-block; padding: 10px 20px; background-color: white; color: black; text-decoration: none; border-radius: 5px;">Lihat Portofolio</a>
+            <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Jejak Imaji</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
+            <a href="galeri-portofolio.html" class="cta-button animate__animated animate__fadeInUp animate__delay-2s" style="display: inline-block; padding: 10px 20px; background-color: white; color: black; text-decoration: none; border-radius: 5px;">Lihat Portofolio</a>
         </div>
     </section>
 
@@ -417,6 +417,43 @@
         .nav-btn:hover {
             background-color: rgba(255,255,255,0.4);
         }
+        nav ul li a {
+            position: relative;
+            padding-bottom: 3px;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        .active {
+            position: relative;
+        }
+        
+        .active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #000;
+        }
+        
         
         /* Pagination dan Redirect Button */
         .modal-pagination {

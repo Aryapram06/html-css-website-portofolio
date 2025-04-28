@@ -23,7 +23,7 @@
                 <li><a href="galeri-portofolio.html" class="nav-link">Galeri Portofolio</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -122,6 +122,30 @@
             left: 0;
             background-color: #000;
         }
+        nav ul li a {
+            position: relative;
+            padding-bottom: 3px;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+       
         
         /* Efek hover halus untuk tombol */
         .btn {

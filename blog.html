@@ -24,7 +24,7 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="galeri-portofolio.html" class="nav-link">Galeri Portofolio</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
@@ -75,9 +75,9 @@
             </div>
         </div>
         
-        <h3 class="animate__animated animate__fadeIn animate__delay-3s">LATEST STORIES</h3>
+        <h3 class="animate__animated animate__fadeIn animate__delay-1s">LATEST STORIES</h3>
         <div class="blog-container">
-            <div class="blog-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="blog-item" >
                 <img src="image/music.png" class="hover-zoom">
                 <h4>Poster Promosi Musik Vintage</h4>
                 <p class="blog-excerpt">Bagaimana poster menjadi senjata ampuh untuk menyampaikan pesan politik</p>
@@ -89,7 +89,7 @@
                 </div>
                 <a href="#" class="link blog-link" data-blog="3">Baca selengkapnya →</a>
             </div>
-            <div class="blog-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-item" >
                 <img src="image/vector.png" class="hover-zoom">
                 <h4>Vector vs raster : Mengapa Illustrator Menjadi Pilihan Terbaik Untuk Desain Grafis </h4>
                 <p class="blog-excerpt">Menganalisis perkembangan tren desain visual terkini dan bagaimana menerapkannya dalam karya kreatif</p>
@@ -101,7 +101,7 @@
                 </div>
                 <a href="#" class="link blog-link" data-blog="4">Baca selengkapnya →</a>
             </div>
-            <div class="blog-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="blog-item" >
                 <img src="image/tren.png" class="hover-zoom">
                 <h4>Tren Desain Visual 2023</h4>
                 <p class="blog-excerpt">Menganalisis perkembangan tren desain visual terkini dan bagaimana menetapkannya dalam karya kreatif</p>
@@ -134,7 +134,7 @@
                 <p>Mengeksplorasi keindahan melalui distorsi visual yang minimalis dan bermakna</p>
             </div>
             
-            <div class="footer-sitemap" data-aos="fade-up">
+            <div class="footer-sitemap" data-aos="fade-up" >
                 <h3>QUICK LINKS</h3>
                 <ul>
                     <li><a href="index.html" class="hover-underline">Home</a></li>
@@ -526,6 +526,41 @@
             margin-bottom: 15px;
             color: #666;
         }
+        /* Memastikan footer selalu terlihat tanpa menunggu animasi */
+footer, 
+.footer-container,
+.footer-logo, 
+.footer-sitemap, 
+.footer-social, 
+.footer-newsletter,
+.copyright {
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-delay: 0s !important;
+}
+
+/* Memperbaiki animasi AOS pada footer */
+footer [data-aos],
+footer [data-aos].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0s !important;
+}
+
+/* Memperbaiki animasi Animate.css pada footer */
+footer .animate__animated {
+    opacity: 1 !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+}
+
+/* Memastikan semua elemen anak di footer terlihat */
+footer * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
         
         /* Animasi untuk modal */
         @keyframes fadeIn {
