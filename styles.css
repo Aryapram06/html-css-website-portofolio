@@ -139,9 +139,9 @@ nav ul li a.active {
 
 .gallery-item {
     flex: 0 0 calc(33.333% - 30px);
-    max-width: auto;
-    height: auto;
-    margin: 25px;
+    max-width: 20%;
+    height: 400px;
+    margin: 60px;
     transition: transform 0.3s ease;
     overflow: hidden;
     border-radius: 5px;
